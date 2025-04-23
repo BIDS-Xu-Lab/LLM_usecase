@@ -39,3 +39,8 @@ pip install ipykernel
 python -m ipykernel install --user --name inference --display-name "inference"
 ```
 Then use this kernel to start **inference.ipynb**
+
+
+### 4. Evaluation
+
+Check **inference.ipynb** for the evaluation details.
