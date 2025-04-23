@@ -4,7 +4,7 @@ Please refer to the code file for example of using LLMs in CHP.
 
 Please leave any comments if you have any questions. 
 
-## 1. First refer to **usecase.ipynb** for data processing
+## 1. First refer to **process_data.ipynb** for data processing
 
 ## 2. Finetuning
 
@@ -23,7 +23,7 @@ cd finetune
 sh run.sh
 ```
 
-### 3. Merge the lora parameters with the backbone model, and that is your own model 
+### Merge the lora parameters with the backbone model, and that is your own model 
 ```
 autotrain tools merge-llm-adapter --base-model-path /home/jupyter/20000360102458359xu/LingfeiQian/saved_models/Llama31_8B_Instruct --adapter-path /home/jupyter/20000360102458359xu/LingfeiQian/finetune/code/Llama318BInstructCONVFINQAtrain11e4/ --output-folder /home/jupyter/20000360102458359xu/LingfeiQian/merged_models/Llama31_8B_Instruct_merged
 ```
@@ -33,4 +33,8 @@ autotrain tools merge-llm-adapter --base-model-path /home/jupyter/20000360102458
 ### Set up environment for inference
 ```
 conda create -n inference python=3.11
+conda activate inference
+pip install ipykernel
+python -m ipykernel install --user --name inference --display-name "inference"
 ```
+Then use this kernel to start **inference.ipynb**
