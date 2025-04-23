@@ -34,6 +34,7 @@ autotrain tools merge-llm-adapter --base-model-path /home/jupyter/20000360102458
 ```
 conda create -n inference python=3.11
 conda activate inference
+pip install vllm
 pip install ipykernel
 python -m ipykernel install --user --name inference --display-name "inference"
 ```
